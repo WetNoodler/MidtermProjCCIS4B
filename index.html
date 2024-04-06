@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="w3.css">
+        <title>POTATO??!?!?!?</title>
+    </head>
+    <body>
+        <div class="w3-center row">
+
+            <div class="col sides"></div>
+            <div class="col center">
+                <h1 class="w3-monospace">potato website</h1> <br>
+                <img src="img/p1.png" style="width: 50%;"> <br>
+                <div>
+                    <a href="potato.html" class="w3-button w3-margin-bottom w3-black w3-hover-yellow radius50">WHAT IS IT</a>
+                    <a href="made.html" class="w3-button w3-margin-bottom w3-black w3-hover-yellow radius50">MADE WITH IT</a>
+                    <a href="quiz.html" class="w3-button w3-margin-bottom w3-black w3-hover-yellow radius50">TEST YOUR POTATO</a>
+                </div>
+                <div class="the-potato-box">
+                    <tt id="rnFact" class="the-potato-in-a-box"></tt>
+                </div>
+            </div>
+            <div class="col sides"></div>
+
+        </div>
+    </body>
+    <script>
+        var facts = [
+            "Potatoes are 99.9% fat free, yet is a nutrient dense food.",
+            "Potatoes make great Vodka.",
+            "Potatoes have a Spanish origin, and were originally called &quotPatata&quot. ",
+            "Thomas Jefferson gets credit for introducing &quotfrench fries&quot to America when he served at a White House dinner.",
+            "The average American eats about 124 pounds of potatoes per year, while Germans eat about twice as much.",
+            "The white potato belongs to the same group as tomatoes, tobacco, chile pepper, eggplant, and the petunia.",
+            "The largest potato was 7 pounds big, grown by J. East and J. Busby of Great Britain.",
+            "An 8 ounce baked or boiled potato has only about 100 calories.",
+            "Potato is a vegetable.",
+            "Potato is also known as a spud.",
+            "Potatoes have more vitamin C than oranges.",
+            "Potatoes have more potassium than bananas.",
+            "Potatoes have more fiber than apples.",
+            "Mr. Potato Head was one of the first children's toy to be advertised on United States television.",
+        ];
+        window.onload = function() {
+            var f = document.getElementById("rnFact");
+            var n = Math.floor(Math.random() * (facts.length - 1));
+            f.innerHTML = facts[n];
+        };
+    </script>
+</html>

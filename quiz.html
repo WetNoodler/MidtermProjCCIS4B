@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="w3.css">
+        <title>POTATO??!?!?!?</title>
+    </head>
+    <body>
+        <a href="index.html" class="w3-button w3-margin-bottom w3-black w3-hover-yellow w3-margin radius50">HOME</a>
+        <div class="w3-center row">
+            <div class="col sides"></div>
+            <div class="col center">
+                <img src="img/p1.png" style="width: 50%;"> <br>
+                <h1 class="impact" id="ti">DO YOU LIKE POTATO??</h1> <br>
+                <button id="toggleQuiz" onclick="toggleQuiz()" class="w3-button w3-yellow w3-hover-black radius50 w3-bold">YES</button>
+                <div id="quiz" class="w3-hide">
+                    <div class="the-potato-box">
+                        <h3 id="question" class="the-potato-in-a-box">QUESTION</h3>
+                        <button id="i1" class="w3-button w3-black w3-hover-yellow w3-margin-left radius50" onclick="answer(0)">A</button>
+                        <button id="i2" class="w3-button w3-black w3-hover-yellow w3-margin-left radius50" onclick="answer(1)">B</button>
+                        <button id="i3" class="w3-button w3-black w3-hover-yellow w3-margin-left radius50" onclick="answer(2)">C</button>
+                        <button id="i4" class="w3-button w3-black w3-hover-yellow w3-margin-left radius50" onclick="answer(3)">D</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col sides"></div>
+        </div>
+    </body>
+    <script>
+        var quizQ = [
+            "What did Avan eat last thanksgiving?",
+            "How many calories does 4 potatoes have?",
+            "How many pounds of potato do Americans eat yearly?",
+            "What were Potatoes called formerly in Spain?",
+            "Which of these potatoes are the most harmful when eaten in large quantities?",
+        ];
+        var items = [
+            ["Banana", "Sofia", "Potato", "Curry"],
+            ["800", "200", "400", "240"],
+            ["59", "126", "124", "218"],
+            ["Patata", "El Pata", "Papata", "El Papa"],
+            ["Red", "Purple", "Blue", "Green"],
+        ];
+
+        var quiz = document.getElementById("question");
+        var i = [
+            document.getElementById("i1"),
+            document.getElementById("i2"),
+            document.getElementById("i3"),
+            document.getElementById("i4"),
+        ];
+
+        window.onload = function() {
+            var n = Math.floor(Math.random() * (quizQ.length - 1));
+            quiz.innerHTML = quizQ[n];
+            i[0].innerHTML = items[n][0];
+            i[1].innerHTML = items[n][1];
+            i[2].innerHTML = items[n][2];
+            i[3].innerHTML = items[n][3];
+        };
+        function answer(x) {
+            if ((x == 1 && items[0][1] == i[1].innerHTML) || (x == 2 && items[1][2] == i[2].innerHTML) || (x == 2 && items[2][2] == i[2].innerHTML) 
+            || (x == 0 && items[3][0] == i[0].innerHTML) || (x == 3 && items[4][3] == i[3].innerHTML)) {
+                localStorage.setItem("gif", "img/win.gif");
+                window.location.href = "extra.html";
+            } else {
+                localStorage.setItem("gif", "img/lose.gif");
+                window.location.href = "extra.html";
+            }
+        };
+        function toggleQuiz() {
+            document.getElementById("quiz").classList.toggle("w3-show");
+            document.getElementById("toggleQuiz").classList.toggle("w3-hide");
+        };
+    </script>
+</html>

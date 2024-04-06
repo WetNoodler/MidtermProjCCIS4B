@@ -1,0 +1,65 @@
+.answer {
+    background-size: 100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.the-potato-box {
+    border-style: double;
+    border-radius: 50px;
+    background-image: url("img/pbg.png");
+    font-weight: 900;
+    max-height: 25vh;
+    overflow-y: hidden;
+}
+
+.the-potato-in-a-box {
+    background-color: wheat;
+    border-radius: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.croq-border {
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 50px;
+    border-color: #aa5500;
+}
+
+.col {
+    float: left;
+    text-align: center;
+}
+
+.sides {
+    width: 25%;
+    height: 100vh;
+}
+.center {
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.radius50 {
+    border-radius: 50px;
+}
+
+.impact {
+    font-family: fantasy;
+}
+
+.mmm-fancy {
+    font-family: 'Brush Script MT', cursive;
+}
+
+.table-img {
+    max-width: 100px;
+}
